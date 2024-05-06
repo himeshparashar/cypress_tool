@@ -3,16 +3,16 @@ from pydantic import BaseModel, Field
 from typing import Type
 
 
-class GreetingsInput(BaseModel):
+class CypressInput(BaseModel):
     greetings: str = Field(..., description="Greeting message to be sent")
 
 
-class GreetingsTool(BaseTool):
+class CypressTool(BaseTool):
     """
     Greetings Tool
     """
     name: str = "Greetings Tool"
-    args_schema: Type[BaseModel] = GreetingsInput
+    args_schema: Type[BaseModel] = CypressInput
     description: str = "Sends a Greeting Message"
 
     def _execute(self, greetings: str = None):
