@@ -11,7 +11,7 @@ class CypressTool(BaseTool):
     """
     Greetings Tool
     """
-    name: str = "Greetings Tool"
+    name: str = "Cypress Tool"
     args_schema: Type[BaseModel] = CypressInput
     description: str = "Sends a Greeting Message"
 
